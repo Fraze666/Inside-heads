@@ -16,8 +16,10 @@ public class SoundTrigger : MonoBehaviour
     {
 
     }
+
     private void OnTriggerEnter(Collider other)
     {
+        print(other.name);
         if (other.tag == "Player")
         {
             _mainMusicManager.PlayMusic(_audioClip);
@@ -27,7 +29,6 @@ public class SoundTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
             _mainMusicManager.StopMusic();
         }
     }

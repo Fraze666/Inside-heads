@@ -29,6 +29,7 @@ public class ManeMusicManager : MonoBehaviour
     }
     public void PlayMusic(AudioClip clip)
     {
+        print("Play");
         _audioSource.clip = clip;
         _audioSource.Play();
         _isPlayning = true;
